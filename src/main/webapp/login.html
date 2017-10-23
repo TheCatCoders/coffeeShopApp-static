@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>Coffee Shop</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	</head>
+
+	<body>
+
+	<div class="header">
+	    <b>Welcome to Felix Coffee Shop</b>
+	    
+	    <div class="mainArea" id="menuBar">
+	        <button id="btnSignin">Sign In</button>
+	        <button id="btnLogin">Login</button>
+        </div>
+	</div>
+
+
+	<form id="loginForm">
+		<div class="mainArea" id="loginInfo" hidden>
+			<label>Username:</label>
+			<input type="text" id="emailAdr" name="emailAdr" required>
+			<label>Password:</label>
+		    <input type="password" id="password" name="passwword" required>
+		    <div class="errorArea" id="errorLogin"></div>
+		    <button id="btnLoginOk">Login</button>
+	   </div>
+	</form>
+
+
+	<div class="rightArea">
+		<img src="images/coffeeCup.jpeg" height="200" width="301">
+	</div>
+
+
+
+    <form id="signInForm"></form>
+        <div class="mainArea" id="userInfo" hidden>
+	        <label>Name:</label>
+	        <input type="text" id="name" name="name" required>
+	        <label>Gender:</label>
+	        <input type="text" id="gender" name="gender" required>
+	        <label>Age:</label>
+	        <input type="datetime" id="birthdate" name="birthdate" required>
+	        <label>Email:</label>
+	        <input type="text" id="email" name="email" required>	        
+	        <div class="errorArea" id="errorSignin"></div>
+            <button id="btnSigninOk">Ok</button>
+            <button id="btnSigninCancel">Cancel</button>
+        </div>
+    </form>
+        
+
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/signIn.js"></script>
+
+
+	</body>
+</html>
