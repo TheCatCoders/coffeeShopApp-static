@@ -1,7 +1,7 @@
 
 function login() {
 	console.log('Login User');
-	var rootURL = "http://localhost:8080/LoginServiceApp/rest";
+	var rootURL = "http://localhost:8080/LoginServiceApp";
 	
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
