@@ -7,8 +7,10 @@ function login() {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
 	} else {
 		$.ajax({
+			headers: {
+		        'Content-Type': 'application/x-www-form-urlencoded'
+		    },
 			type: 'POST',
-			contentType: 'application/json',
 			url: rootURL +"/login/",
 			dataType: "json",
 			data: loginFormToJSON(),
