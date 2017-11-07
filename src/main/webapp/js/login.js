@@ -8,9 +8,10 @@ function login() {
 	} else {
 		$.ajax({
 			type: 'POST',
+            cache: false,
+            crossDomain: true,
 			contentType: 'application/json',
 			url: rootURL +"/login/",
-			contentType:"application/json; charset=utf-8",
 			dateType: "json",
 			data: loginFormToJSON(),
 			success: sucessLogin,
