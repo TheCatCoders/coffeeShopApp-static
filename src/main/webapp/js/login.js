@@ -1,7 +1,12 @@
 
 function login() {
 	console.log('Login User');
-	var rootURL = "http://localhost:8080/LoginServiceApp";
+	// public wildfly
+    //var rootURL = "http://loginserviceroute1-fronttoback.193b.starter-ca-central-1.openshiftapps.com/LoginServiceApp/api";
+    // local wildfly
+	//var rootURL = "http://localhost:9080/LoginServiceApp/api";
+    // local tomcat
+	var rootURL = "http://localhost:8080/api";
 	
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
