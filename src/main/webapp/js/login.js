@@ -7,7 +7,7 @@ function login() {
 	//var rootURL = "http://localhost:9080/LoginServiceApp/api";
     // local tomcat
 	var rootURL = "http://localhost:8080/api";
-	
+
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
 	} else {
@@ -27,27 +27,24 @@ function login() {
 
 
 function sucessLogin(data) {
-	console.log( 'Sucess Login: ' + data.username );
-	
 	$('#loginInfo').hide();
-	
+
 	$('#name').val( data.username );
 	$('#gender').val( data.gender );
 	$('#birthdate').val( data.age );
 	$('#email').val( data.emailAdr );
-	
+
 	$('#userInfo').show();
 }
 
 function errorLogin(jqXHR) {
-	console.log( 'Error Login: ' + jqXHR.responseJSON );
-	$('#errorLogin').text( jqXHR.responseJSON );
+	$('#errorLogin').text( jqXHR.responseText );
 }
 
 // Helper function to serialize all the form fields into a JSON string
 function loginFormToJSON() {
 	return JSON.stringify({
-		"emailAdr": $('#emailAdr').val(), 
+		"emailAdr": $('#emailAdr').val(),
 		"password": $('#password').val()
 		});
 }
