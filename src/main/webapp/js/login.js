@@ -1,12 +1,7 @@
 
 function login() {
-	console.log('Login User');
-	// public wildfly
-    //var rootURL = "http://loginserviceroute1-fronttoback.193b.starter-ca-central-1.openshiftapps.com/LoginServiceApp/api";
-    // local wildfly
-	//var rootURL = "http://localhost:9080/LoginServiceApp/api";
-    // local tomcat
-	var rootURL = "http://localhost:8080/api";
+	// Specific route in OCP, need to make this generic in some way
+	var rootURL = "http://loginservice-coffeshop.192.168.64.2.nip.io/LoginServiceApp/api";
 
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
