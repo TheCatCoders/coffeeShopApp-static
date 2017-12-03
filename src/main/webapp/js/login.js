@@ -8,7 +8,9 @@ function login() {
             cache: false,
             crossDomain: true,
 			contentType: 'application/json',
-			url: apiURL.loginURL,
+			url:$.getJSON( "https://github.com/TheCatCoders/coffeeShopApp-static/blob/master/properties/config.properties", function( json ) {
+				json.loginAPIBaseURL + loginAction
+			}),
 			dateType: "json",
 			data: loginFormToJSON(),
 			success: sucessLogin,
