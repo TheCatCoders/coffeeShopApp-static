@@ -1,5 +1,8 @@
 
 function login() {
+	// Specific route in OCP, need to make this generic in some way
+	var rootURL = "http://loginservice-coffeshop.192.168.64.2.nip.io/LoginServiceApp/api";
+
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
 	} else {
@@ -8,9 +11,7 @@ function login() {
             cache: false,
             crossDomain: true,
 			contentType: 'application/json',
-			url:$.getJSON( "https://github.com/TheCatCoders/coffeeShopApp-static/blob/master/properties/config.properties", function( json ) {
-				json.loginAPIBaseURL + loginAction
-			}),
+			url: rootURL +"/login/",
 			dateType: "json",
 			data: loginFormToJSON(),
 			success: sucessLogin,
