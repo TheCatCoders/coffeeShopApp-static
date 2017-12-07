@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>CoffeeShopApp</name>
-  <description>WebApp that contain the web pages</description>
+  <description>Application for the coffee shop</description>
 
     <properties>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,14 +15,14 @@
     </properties>
 
   <dependencies>
-
+<!-- 
 	<dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>javax.servlet-api</artifactId>
 	    <version>3.1.0</version>
 	    <scope>provided</scope>
 	</dependency>
-
+-->
   </dependencies>
   <build>
     <finalName>CoffeeShopApp</finalName>
