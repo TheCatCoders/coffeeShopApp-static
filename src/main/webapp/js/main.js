@@ -29,3 +29,8 @@ $('#btnSigninCancel').click(function() {
 
 	return false;
 });
+
+$('#btnTest').click(function() {
+	test();
+	return false;
+});
