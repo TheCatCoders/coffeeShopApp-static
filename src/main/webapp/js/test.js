@@ -10,7 +10,7 @@ function test() {
 		contentType: 'application/json',
 		url: rootURL +"/select/",
 		dateType: "json",
-		data: loginFormToJSON(),
+		data: testFormToJSON(),
 		success: sucessTest,
 		error: errorTest
 	});
@@ -26,7 +26,7 @@ function errorTest(jqXHR) {
 }
 
 // Helper function to serialize all the form fields into a JSON string
-function loginFormToJSON() {
+function testFormToJSON() {
 	return JSON.stringify({
 		"emailAdr": "test@example.com",
 		"password": "test123"
