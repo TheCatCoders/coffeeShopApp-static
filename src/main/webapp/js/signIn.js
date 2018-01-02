@@ -1,29 +1,28 @@
 
 function signIn() {
-	console.log('Create User');
-	var rootURL = "http://localhost:8080/CreateUserServiceApp/rest";
-	
+	// Specific route in OCP, need to make this generic in some way
+	var rootURL = "http://registerservice-coffeshop.192.168.64.2.nip.io/RegistrationService/api";
+
 	$.ajax({
 		type: 'POST',
+        cache: false,
+        crossDomain: true,
 		contentType: 'application/json',
-		url: rootURL +"/createUser/",
-		dataType: "json",
+		url: rootURL +"/register/",
+		dateType: "json",
 		data: signinFormToJSON(),
-		success: sucessCreateUser,
-		error: errorCreateUser
+		success: sucessRegistration,
+		error: errorRegistration
 	});
 }
 
 
-function sucessCreateUser(data) {
-	console.log( 'Sucess Create User: ' );
-	
+function sucessRegistration(data) {
 	$('#userInfo').hide();
 	$('#loginInfo').show();
 }
 
-function errorCreateUser(jqXHR) {
-	console.log( 'Error creating file ' + jqXHR.responseJSON );
+function errorRegistration(jqXHR) {
 	$('#errorSignin').text( jqXHR.responseJSON );
 }
 
@@ -35,6 +34,4 @@ function signinFormToJSON() {
         "age": $('#birthdate').val(),
 		"emailAdr": $('#email').val(), 
 		});
-	
-	//return JSON.parse( JSONObject ); 
 }
