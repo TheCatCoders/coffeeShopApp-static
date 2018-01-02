@@ -23,12 +23,10 @@ function login() {
 
 function sucessLogin(data) {
 	$('#loginInfo').hide();
-
-	$('#name').val( data.username );
-	$('#gender').val( data.gender );
-	$('#birthdate').val( data.age );
-	$('#email').val( data.emailAdr );
-
+	$('#menuBar').hide();
+	
+	$('#userInfo').text( "Welcome " + data.username );
+	
 	$('#userInfo').show();
 }
 

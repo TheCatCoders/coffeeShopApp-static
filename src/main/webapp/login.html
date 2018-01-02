@@ -7,53 +7,76 @@
 
 	<body>
 
-	<div class="header">
-	    <b>Welcome to Felix Coffee Shop</b>
+    <div class="headerBar">
+	    <div class="headerLogo">
+	            <img src="images/theCat.png">
+	    </div>
+
+	    <div class="headerText">
+            <b>Mad Cat Coffee Shop</b>
+	    </div>
 	    
-	    <div class="mainArea" id="menuBar">
-	        <button id="btnSignin">Sign In</button>
-	        <button id="btnLogin">Login</button>
-	        <button id="btnTest">Test</button>
+	    <div class="headerMenuBar" id="menuBar">
+	        <button id="btnSignin">Register</button>
+	        <button id="btnLogin">SignIn</button>
+	    </div>
+	    
+        <div class="headerUserInfo" id="userInfo" hidden>
         </div>
-	</div>
+
+    </div>
+ 
+    <div class="mainImage" id="welcomeImage">
+       <img src="images/coffeeCup.jpg">
+    </div>
+
+    <div class="footerBar">
+        <div class="footerText">
+            2018 TheCatCoder Organization. All rights reserved.
+        </div>
+    </div>
+ 
+ 
+<!--  Login Section -->
+    <form id="loginForm">
+        <div class="mainArea" id="loginInfo" hidden>
+	        <div class="mainAreaText">
+		            <label>Username:</label>
+		            <input type="text" id="emailAdr" name="emailAdr" required>
+		            <label>Password:</label>
+		            <input type="password" id="password" name="passwword" required>
+		            <div class="errorArea" id="errorLogin"></div>
+		            <button id="btnLoginOk">Sign In</button>
+            </div>	            
+	        <div class="mainAreaRight">
+	            <img src="images/latte.png" height="240" width="260">
+	        </div>
+       </div>
+    </form>
 
 
-	<form id="loginForm">
-		<div class="mainArea" id="loginInfo" hidden>
-			<label>Username:</label>
-			<input type="text" id="emailAdr" name="emailAdr" required>
-			<label>Password:</label>
-		    <input type="password" id="password" name="passwword" required>
-		    <div class="errorArea" id="errorLogin"></div>
-		    <button id="btnLoginOk">Login</button>
-	   </div>
-	</form>
-
-
-	<div class="rightArea">
-		<img src="images/coffeeCup.jpeg" height="200" width="301">
-	</div>
-
-
-
+    <!--  Registration Section -->
     <form id="signInForm">
-        <div class="mainArea" id="userInfo" hidden>
-	        <label>Name:</label>
-	        <input type="text" id="name" name="name" required>
-	        <label>Gender:</label>
-	        <input type="text" id="gender" name="gender" required>
-	        <label>Age:</label>
-	        <input type="datetime" id="birthdate" name="birthdate" required>
-	        <label>Email:</label>
-	        <input type="text" id="email" name="email" required>	        
-	        <div class="errorArea" id="errorSignin"></div>
-            <button id="btnSigninOk">Ok</button>
-            <button id="btnSigninCancel">Cancel</button>
+        <div class="mainArea" id="userRegistration" hidden>
+            <div class="mainAreaText">      
+		        <label>Name:</label>
+		        <input type="text" id="name" name="name" required>
+		        <label>Gender:</label>
+		        <input type="text" id="gender" name="gender" required>
+		        <label>Date of Birth</label>
+		        <input type="datetime" id="birthdate" name="birthdate" required>
+		        <label>Email:</label>
+		        <input type="text" id="email" name="email" required>	        
+		        <div class="errorArea" id="errorSignin"></div>
+	            <button id="btnSigninOk">Register</button>
+            </div>            
+            <div class="mainAreaRight">
+                <img src="images/latte.png" height="240" width="260">
+            </div>
         </div>
     </form>
         
-
-
+<!--  Needed script -->
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/login.js"></script>
