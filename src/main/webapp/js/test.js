@@ -1,14 +1,14 @@
 
 function test() {
 	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://dbservice-coffeshop.192.168.64.2.nip.io/DatabaseService/api/db";
+	var rootURL = "http://registerservice-coffeshop.192.168.64.2.nip.io/RegisterService/api";
 
 	$.ajax({
 		type: 'POST',
         cache: false,
         crossDomain: true,
 		contentType: 'application/json',
-		url: rootURL +"/select/",
+		url: rootURL +"/register/",
 		dateType: "json",
 		data: testFormToJSON(),
 		success: sucessTest,
