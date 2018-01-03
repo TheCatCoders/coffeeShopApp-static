@@ -1,6 +1,8 @@
 
 // Login button binding
 $('#btnLogin').click(function() {
+	$('#signInForm').trigger("reset");
+
 	$('#welcomeImage').hide();
 	$('#userRegistration').hide();
 	$('#loginInfo').show();
@@ -14,6 +16,8 @@ $('#btnLoginOk').click(function() {
 
 // Sign in button binding
 $('#btnSignin').click(function() {
+	$('#loginForm').trigger("reset");
+
 	$('#welcomeImage').hide();
 	$('#loginInfo').hide();
 	$('#userRegistration').show();
@@ -26,8 +30,26 @@ $('#btnSigninOk').click(function() {
 });
 
 $('#btnCancel').click(function() {
+	$('#loginForm').trigger("reset");
+	$('#signInForm').trigger("reset");
+
 	$('#userRegistration').hide();
 	$('#loginInfo').hide();
 
+	return false;
+});
+
+// Button Sign out binding
+$('#btnLSignout').click(function() {
+	$('#loginForm').trigger("reset");
+	$('#signInForm').trigger("reset");
+	
+	$('#userRegistration').hide();
+	$('#loginInfo').hide();
+	$('#userInfoBar').hide();
+
+	$('#menuBar').show();
+	$('#welcomeImage').show();
+	
 	return false;
 });

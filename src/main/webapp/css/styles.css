@@ -36,7 +36,12 @@
     z-index: 1;
 }
 
-.headerUserInfo {   
+.headerUserInfo {
+    padding-top: 30px;
+    float: right;
+}
+
+.headerSignOut {   
     padding-right: 50px;
     padding-top: 30px;
     float: right;

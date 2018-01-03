@@ -26,8 +26,7 @@ function sucessLogin(data) {
 	$('#menuBar').hide();
 	
 	$('#userInfo').text( "Welcome " + data.username );
-	
-	$('#userInfo').show();
+	$('#userInfoBar').show();
 }
 
 function errorLogin(jqXHR) {

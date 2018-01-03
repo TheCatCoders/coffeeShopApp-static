@@ -18,7 +18,7 @@ function signIn() {
 
 
 function sucessRegistration(data) {
-	$('#userInfo').hide();
+	$('#userInfoBar').hide();
 	$('#loginInfo').show();
 }
 
