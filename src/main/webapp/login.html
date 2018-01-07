@@ -63,13 +63,17 @@
     <form id="signInForm">
         <div class="mainArea" id="userRegistration" hidden>
             <div class="mainAreaText">      
-		        <label>Name:</label>
+		        <label for="name">Name:</label>
 		        <input type="text" id="name" name="name" required>
-		        <label>Gender:</label>
-		        <input type="text" id="gender" name="gender" required>
-		        <label>Date of Birth</label>
+		        <label for="gender">Gender:
+                <select id="gender" name="gender" required>
+                  <option value="Male">Man</option>
+                  <option value="Female">Women</option>
+                </select>
+                </label><br>
+		        <label for="birthdater">Date of Birth</label>
 		        <input type="datetime" id="birthdate" name="birthdate" required>
-		        <label>Email:</label>
+		        <label for="email">Email:</label>
 		        <input type="text" id="email" name="email" required>	        
 		        <div class="errorArea" id="errorSignin"></div>
 	            <button id="btnSigninOk">Register</button>
