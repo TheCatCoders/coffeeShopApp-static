@@ -26,8 +26,10 @@ function signIn() {
 
 
 function sucessRegistration(data) {
-	$('#userInfoBar').hide();
-	$('#loginInfo').show();
+	$('#emailAdr').val( $('#email').val() );
+	$('#password').val( $('#passwordInput').val() );
+	$('#userRegistration').hide();
+	callLoginService();
 }
 
 function errorRegistration(jqXHR) {

@@ -6,19 +6,27 @@ function login() {
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
 	} else {
-		$.ajax({
-			type: 'POST',
-            cache: false,
-            crossDomain: true,
-			contentType: 'application/json',
-			url: rootURL +"/login/",
-			dateType: "json",
-			data: loginFormToJSON(),
-			success: sucessLogin,
-			error: errorLogin
-		});
+		callLoginService();
 	}
 }
+
+function callLoginService() {
+	// Specific route in OCP, need to make this generic in some way
+	var rootURL = "http://loginservice-coffeshop.192.168.64.2.nip.io/LoginService/api";
+
+	$.ajax({
+		type: 'POST',
+        cache: false,
+        crossDomain: true,
+		contentType: 'application/json',
+		url: rootURL +"/login/",
+		dateType: "json",
+		data: loginFormToJSON(),
+		success: sucessLogin,
+		error: errorLogin
+	});
+}
+
 
 
 function sucessLogin(data) {
@@ -27,6 +35,7 @@ function sucessLogin(data) {
 	
 	$('#userInfo').text( "Welcome " + data.username );
 	$('#userInfoBar').show();
+	$('#coffeeList').show();
 }
 
 function errorLogin(jqXHR) {

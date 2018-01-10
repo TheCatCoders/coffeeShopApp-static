@@ -47,6 +47,7 @@ $('#btnLSignout').click(function() {
 	$('#userRegistration').hide();
 	$('#loginInfo').hide();
 	$('#userInfoBar').hide();
+	$('#coffeeList').hide();
 
 	$('#menuBar').show();
 	$('#welcomeImage').show();
