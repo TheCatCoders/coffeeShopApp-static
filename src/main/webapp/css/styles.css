@@ -88,6 +88,16 @@
     position: absolute;
 }
 
+.signInFormLeft {
+    width: 25%;
+    float: left;
+    text-align: left;
+}
+.signInFormRight {
+    width: 50%;
+}
+
+
 .mainAreaRight {
     float:right;
     padding-top:35px;
@@ -128,12 +138,4 @@ textarea {
     margin-top:5px;
     height: 200px;
     width:250px;
-}
-
-label {
-    display:block;
-}
-
-button {
-    padding:6px;
 }

@@ -3,17 +3,25 @@ function signIn() {
 	// Specific route in OCP, need to make this generic in some way
 	var rootURL = "http://registerservice-coffeshop.192.168.64.2.nip.io/RegistrationService/api";
 
-	$.ajax({
-		type: 'POST',
-        cache: false,
-        crossDomain: true,
-		contentType: 'application/json',
-		url: rootURL +"/register/",
-		dateType: "json",
-		data: signinFormToJSON(),
-		success: sucessRegistration,
-		error: errorRegistration
-	});
+	if( $('#name').val() == '' || 
+		$('#gender').val() =='' ||
+		$('#age').val() == '' || 
+		$('#email').val() =='' ||
+		$('#passwordInput').val() == '' ) {
+		$('#errorSignin').text( "Please fill all fields...!!!!!!" );
+	} else {
+		$.ajax({
+			type: 'POST',
+	        cache: false,
+	        crossDomain: true,
+			contentType: 'application/json',
+			url: rootURL +"/register/",
+			dateType: "json",
+			data: signinFormToJSON(),
+			success: sucessRegistration,
+			error: errorRegistration
+		});
+	}
 }
 
 
@@ -32,6 +40,7 @@ function signinFormToJSON() {
         "username": $('#name').val(),
         "gender": $('#gender').val(),
         "age": $('#birthdate').val(),
-		"emailAdr": $('#email').val(), 
+		"emailAdr": $('#email').val(),
+		"password": $('#passwordInput').val()
 		});
 }

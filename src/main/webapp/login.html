@@ -62,19 +62,19 @@
     <!--  Registration Section -->
     <form id="signInForm">
         <div class="mainArea" id="userRegistration" hidden>
-            <div class="mainAreaText">      
-		        <label for="name">Name:</label>
-		        <input type="text" id="name" name="name" required>
-		        <label for="gender">Gender:
-                <select id="gender" name="gender" required>
+            <div class="mainAreaText">   
+				* Name <input type="text" id="name" name="name" required>
+				<br>
+                * Gender<select id="gender" name="gender" required>
                   <option value="Male">Man</option>
                   <option value="Female">Women</option>
                 </select>
-                </label><br>
-		        <label for="birthdater">Date of Birth</label>
-		        <input type="datetime" id="birthdate" name="birthdate" required>
-		        <label for="email">Email:</label>
-		        <input type="text" id="email" name="email" required>	        
+                <br>
+		        * Date of Birth<input type="date" id="birthdate" name="birthdate" required>
+		        <br>
+		        * Email<input type="email" id="email" name="email" required placeholder="email@youremail.com">
+                <br>
+                * Password<input type="password" id="passwordInput" name="passwordInput" required>
 		        <div class="errorArea" id="errorSignin"></div>
 	            <button id="btnSigninOk">Register</button>
             </div>            
