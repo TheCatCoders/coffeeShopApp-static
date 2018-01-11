@@ -5,7 +5,10 @@ $('#btnLogin').click(function() {
 
 	$('#welcomeImage').hide();
 	$('#userRegistration').hide();
+	
+	$('#errorLogin').text( "" );
 	$('#loginInfo').show();
+	
 	return false;
 });
 
@@ -20,7 +23,10 @@ $('#btnSignin').click(function() {
 
 	$('#welcomeImage').hide();
 	$('#loginInfo').hide();
+	
+	$('#errorSignin').text( "" );
 	$('#userRegistration').show();
+	
 	return false;
 });
 
