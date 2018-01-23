@@ -1,8 +1,5 @@
 
 function login() {
-	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://loginservice:8080/LoginService/api";
-
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
 	} else {
