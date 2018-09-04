@@ -9,7 +9,7 @@ function login() {
 
 function callLoginService() {
 	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://loginservice-coffeshop.192.168.64.2.nip.io/LoginService/api";
+	var rootURL = "http://loginservice-coffeeshop.192.168.64.2.nip.io/LoginService/api";
 
 	$.ajax({
 		type: 'POST',

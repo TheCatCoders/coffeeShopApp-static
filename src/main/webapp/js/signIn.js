@@ -1,7 +1,7 @@
 
 function signIn() {
 	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://registerservice-coffeshop.192.168.64.2.nip.io/RegistrationService/api";
+	var rootURL = "http://registerservice-coffeeshop.192.168.64.2.nip.io/RegistrationService/api";
 
 	if( $('#name').val() == '' || 
 		$('#gender').val() =='' ||
