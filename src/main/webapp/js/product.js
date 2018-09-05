@@ -10,7 +10,6 @@ function findProduct() {
 		contentType: 'application/json',
 		url: rootURL +"/products",
 		dateType: "json",
-		data: signinFormToJSON(),
 		success: renderProducts,
 		error: errorProduct
 	});
