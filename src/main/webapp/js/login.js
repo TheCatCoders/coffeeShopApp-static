@@ -27,6 +27,8 @@ function callLoginService() {
 
 
 function sucessLogin(data) {
+    findProduct();
+
 	$('#loginInfo').hide();
 	$('#menuBar').hide();
 	
