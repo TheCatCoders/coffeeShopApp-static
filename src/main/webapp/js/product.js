@@ -3,18 +3,17 @@ function findProduct() {
 	// Specific route in OCP, need to make this generic in some way
 	var rootURL = "http://productservice-coffeeshop.192.168.64.2.nip.io/ProductService/api";
 
-	} else {
-		$.ajax({
-			type: 'GET',
-			cache: false,
-			crossDomain: true,
-			contentType: 'application/json',
-			url: rootURL +"/products",
-			dateType: "json",
-			data: signinFormToJSON(),
-			success: renderProducts,
-			error: errorProduct
-		});
+	$.ajax({
+		type: 'GET',
+		cache: false,
+		crossDomain: true,
+		contentType: 'application/json',
+		url: rootURL +"/products",
+		dateType: "json",
+		data: signinFormToJSON(),
+		success: renderProducts,
+		error: errorProduct
+	});
 }
 
 
