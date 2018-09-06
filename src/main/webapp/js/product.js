@@ -32,11 +32,10 @@ function errorProduct(jqXHR) {
 }
 
 //triggered when modal for product is about to be shown
-$('#productModal').on('show.bs.modal', function(e) {
+$('#productModal').on('show.bs.modal', function() {
 
     //get data-id attribute of the clicked element
     var drinkId = $(e.relatedTarget).data('drink-id');
 
-    //populate the textbox
-    $(e.currentTarget).find('input[name="modalProductName"]').val(drinkId);
+    $('#modalProductName').val( drinkId );
 });
