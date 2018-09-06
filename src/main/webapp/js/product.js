@@ -44,7 +44,7 @@ $('#productModal').on('show.bs.modal', function(e) {
         url: rootURL +"/products/" + $(e.relatedTarget).data('drink-id'),
         dateType: "json",
         success: function (data) {
-            $('#modalProductName').text( data.name );
+            $('#productModalHeader').text( data.name );
         	$('#modalProductDesc').text( data.description );
             $('#modalProductCat').text( data.category );
             $('#modalProductSubCat1').text( data.subCategory_1 );
