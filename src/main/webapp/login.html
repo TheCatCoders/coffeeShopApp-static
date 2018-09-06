@@ -49,12 +49,16 @@
         <form id="loginForm">
             <div class="mainArea" id="loginInfo" hidden>
                 <div class="mainAreaText">
-                        <label>Username:</label>
-                        <input type="text" id="emailAdr" name="emailAdr" required><br>
-                        <label>Password:</label>
-                        <input type="password" id="password" name="passwword" required>
-                        <div class="errorArea" id="errorLogin"></div>
-                        <button id="btnLoginOk">Sign In</button>
+                    <div class="form-group">
+                        <label for="emailAdr">Username:</label>
+                        <input type="text" class="form-control" id="emailAdr" name="emailAdr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required >
+                    </div>
+                    <div class="errorArea" id="errorLogin"></div>
+                    <button id="btnLoginOk">Sign In</button>
                 </div>
                 <div class="mainAreaRight">
                 </div>
@@ -106,7 +110,12 @@
                         <h4 class="modal-title" id="modelHeader">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                        * Name <input type="text" id="modelProductName">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Name:</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">this is the product Name</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
