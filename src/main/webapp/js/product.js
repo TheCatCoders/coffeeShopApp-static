@@ -21,7 +21,7 @@ function renderProducts(data) {
 
     $('#productList li').remove();
     $.each(list, function(index, product) {
-        $('#productList').append('<li class="list-group-item"><a href="#" data-toggle="modal" data-target="#productModal" data-drink-id="' + product.id + '">'+ product.name +  '</a><span class="badge">' + product.price + '</span></li>');
+        $('#productList').append('<li class="list-group-item"><a href="#" data-toggle="modal" data-target="#productModal" data-drink-id="' + product.id + '">'+ product.name +  '</a><span class="badge">' + product.price + ' $ </span></li>');
     });
 }
 
@@ -44,7 +44,11 @@ $('#productModal').on('show.bs.modal', function(e) {
         url: rootURL +"/products/" + $(e.relatedTarget).data('drink-id'),
         dateType: "json",
         success: function (data) {
-        	$('#productModalHeader').text( data.name );
+        	$('#modalProductDesc').text( data.description );
+            $('#modalProductCat').text( data.category );
+            $('#modalProductSubCat_1').text( data.subcategory_1 );
+            $('#modalProductSubCat_2').text( data.subcategory_2 );
+            $('#modalProductPrice').text( data.price + " $" ) ;
     	},
         error: errorProduct
     });
