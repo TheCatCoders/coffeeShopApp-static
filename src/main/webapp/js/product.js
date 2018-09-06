@@ -46,8 +46,8 @@ $('#productModal').on('show.bs.modal', function(e) {
         success: function (data) {
         	$('#modalProductDesc').text( data.description );
             $('#modalProductCat').text( data.category );
-            $('#modalProductSubCat_1').text( data.subcategory_1 );
-            $('#modalProductSubCat_2').text( data.subcategory_2 );
+            $('#modalProductSubCat_1').text( data.subCategory_1 );
+            $('#modalProductSubCat_2').text( data.subCategory_2 );
             $('#modalProductPrice').text( data.price + " $" ) ;
     	},
         error: errorProduct
