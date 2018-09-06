@@ -45,7 +45,7 @@ $('#productModal').on('show.bs.modal', function(e) {
         dateType: "json",
         success: function (data) {
             $('#modalProductName').text( data.name );
-        	$('#modalProductDesc').val( data.description );
+        	$('#modalProductDesc').text( data.description );
             $('#modalProductCat').val( data.category );
             $('#modalProductSubCat1').val( data.subCategory_1 );
             $('#modalProductSubCat2').val( data.subCategory_2 );
