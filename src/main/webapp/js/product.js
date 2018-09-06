@@ -46,10 +46,10 @@ $('#productModal').on('show.bs.modal', function(e) {
         success: function (data) {
             $('#modalProductName').text( data.name );
         	$('#modalProductDesc').text( data.description );
-            $('#modalProductCat').val( data.category );
-            $('#modalProductSubCat1').val( data.subCategory_1 );
-            $('#modalProductSubCat2').val( data.subCategory_2 );
-            $('#modalProductPrice').val( data.price + " $" ) ;
+            $('#modalProductCat').text( data.category );
+            $('#modalProductSubCat1').text( data.subCategory_1 );
+            $('#modalProductSubCat2').text( data.subCategory_2 );
+            $('#modalProductPrice').text( data.price + " $" ) ;
     	},
         error: errorProduct
     });
