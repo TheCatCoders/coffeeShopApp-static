@@ -43,11 +43,9 @@ $('#productModal').on('show.bs.modal', function(e) {
         contentType: 'application/json',
         url: rootURL +"/products/" + $(e.relatedTarget).data('drink-id'),
         dateType: "json",
-        success: success: function (data) {
+        success: function (data) {
         	$('#modalProductName').text( data.name );
     	},
-
-    	}
         error: errorProduct
     });
 });
