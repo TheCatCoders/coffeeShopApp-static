@@ -23,7 +23,7 @@ function renderProducts(data) {
 
 	$('#productList li').remove();
 	$.each(list, function(index, product) {
-		$('#productList').append('<li class="list-group-item"><a href="#" data-identity="' + product.id + '">'+ product.name +  '</a><span class="badge">' + product.price + '</span></li>');
+		$('#productList').append('<li class="list-group-item"><a href="#" data-toggle="modal" data-target="#myModal" data-identity="' + product.id + '">'+ product.name +  '</a><span class="badge">' + product.price + '</span></li>');
 		});
 }
 
