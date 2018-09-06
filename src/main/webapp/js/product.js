@@ -37,5 +37,5 @@ $('#productModal').on('show.bs.modal', function(e) {
     //get data-id attribute of the clicked element
     var drinkId = $(e.relatedTarget).data('drink-id');
 
-    $('#modalProductName').val( drinkId );
+    $('#modalProductName').text( drinkId );
 });
