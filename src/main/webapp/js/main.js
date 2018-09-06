@@ -1,3 +1,17 @@
+// HOome
+$('#homeCat').click(function() {
+    $('#loginForm').trigger("reset");
+    $('#signInForm').trigger("reset");
+
+    $('#userRegistration').hide();
+    $('#loginInfo').hide();
+    $('#productSection').hide();
+    $('#welcomeImage').show();
+
+    return false;
+});
+
+
 
 // Login button binding
 $('#btnLogin').click(function() {
@@ -20,8 +34,9 @@ $('#btnLoginOk').click(function() {
 // Sign in button binding
 $('#btnSignin').click(function() {
 	$('#loginForm').trigger("reset");
+    $('#signInForm').trigger("reset");
 
-	$('#welcomeImage').hide();
+    $('#welcomeImage').hide();
 	$('#loginInfo').hide();
 	
 	$('#errorSignin').text( "" );
@@ -35,27 +50,21 @@ $('#btnSigninOk').click(function() {
 	return false;
 });
 
-$('#btnCancel').click(function() {
-	$('#loginForm').trigger("reset");
-	$('#signInForm').trigger("reset");
-
-	$('#userRegistration').hide();
-	$('#loginInfo').hide();
-
-	return false;
+$('#btnFindProduct').click(function() {
+    findProduct();
+    return false;
 });
 
 // Button Sign out binding
-$('#btnLSignout').click(function() {
+$('#btnSignout').click(function() {
 	$('#loginForm').trigger("reset");
 	$('#signInForm').trigger("reset");
 	
 	$('#userRegistration').hide();
 	$('#loginInfo').hide();
-	$('#userInfoBar').hide();
-	$('#coffeeList').hide();
+	$('#productSection').hide();
 
-	$('#menuBar').show();
+
 	$('#welcomeImage').show();
 	
 	return false;

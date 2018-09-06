@@ -1,117 +1,64 @@
 * {
-  margin:0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+    margin:0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
 }
 
-.headerBar {
-    position: fix;
-    width: 100%;
-    height:90px;
-    z-index: 0; 
-    background-color:#bc6900;
+/* Create two equal columns that floats next to each other */
+.row {
+
+    padding-top: 93px;
+    display: flex;
 }
 
-.headerLogo {
-    padding-top: 10px;
-    padding-left: 30px;
-    position: absolute;
-    height:100px;
-    z-index: 1;
+/* Create two equal columns that sits next to each other */
+.column{
+    flex: 50%;
+    padding: 10px;
+}clear: both;
+
+
+.navbar ul li {
+    height: 40px;
+    line-height: 40px;
 }
 
-.headerText {
-    padding-top: 30px;
-    left:130px;
-    position: absolute;
-    height:100px;
-    z-index: 1;
-    color: white;
+.navbar span {
+    height: 80px;
+    line-height: 80px;
 }
 
-.headerMenuBar {   
-    padding-right: 50px;
-    padding-top: 30px;
-    float: right;
-    z-index: 1;
+.navbar-default {
+    min-height: 92px;
+    height: 92px;
+    background-color: #99ddff;
+    border-color: #99ddff;
+    color: #ffffff;
 }
 
-.headerUserInfo {
-    padding-top: 30px;
-    float: right;
+.navbar-footer {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
 }
 
-.headerSignOut {   
-    padding-right: 50px;
-    padding-top: 30px;
-    float: right;
+.btn-default {
+    background-color: #0077b3 !important;
+    border-color:#0077b3 !important;
+    color:#FFFFFF !important;;
+    font-size:18px
 }
-
-.footerBar {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:100px;
-   width:100%;
-   background-color:black;
-}
-
-.footerText {
-   position:fixed;
-   bottom:0px;
-   padding-left:25px;
-   padding-top:65px;
-   z-index: 1;
-   color: #c0c0c0;
-}
-
-.mainImage {
-    position: absolute;
-    width: 50%; 
-    height: 50%;
-    z-index: -1; 
-    top: 25%;
-    left: 15%;
-}
-
 
 .mainArea {
     position: absolute;
-    width: 50%; 
-    height: 50%;
-    z-index: -1; 
-    top: 25%;
-    left: 25%;
+    padding-top: 93px;
 }
 
-.mainAreaText {
-    position: absolute;
-}
-
-.signInFormLeft {
-    width: 25%;
-    float: left;
-    text-align: left;
-}
-.signInFormRight {
-    width: 50%;
-}
-
-
-.mainAreaRight {
-    float:right;
-    padding-top:35px;
-}
-
-button {
-     background:none!important;
-     color:inherit;
-     border:none; 
-     padding:0!important;
-     font: inherit;
-     border-bottom:1px solid #444; 
-     cursor: pointer;
-}
+.mainArea input {
+    margin-bottom:15px;
+    margin-top:5px;
+    width:280px;
 
 .errorArea {
     top:15px;
@@ -121,21 +68,3 @@ button {
     font-weight: bold;
 }
 
-input, textarea {
-  border:1px solid #ccc;
-  min-height:30px;
-  outline: none;
-}
-
-.mainArea input {
-  margin-bottom:15px;
-  margin-top:5px;
-  width:280px;
-}
-
-textarea {
-    margin-bottom:15px;
-    margin-top:5px;
-    height: 200px;
-    width:250px;
-}

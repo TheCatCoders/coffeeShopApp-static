@@ -30,11 +30,8 @@ function sucessLogin(data) {
     findProduct();
 
 	$('#loginInfo').hide();
-	$('#menuBar').hide();
-	
-	$('#userInfo').text( "Welcome " + data.username );
 	$('#userInfoBar').show();
-	$('#coffeeList').show();
+	$('#productSection').show();
 }
 
 function errorLogin(jqXHR) {
