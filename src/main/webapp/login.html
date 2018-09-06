@@ -100,7 +100,7 @@
         </div>
 
         <!-- Product view Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal fade" id="productModal" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -111,10 +111,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label class="control-label col-sm-2">Name:</label>
-                            <div class="col-sm-10">
-                                <p class="form-control-static">this is the product Name</p>
-                            </div>
+                            <label for="modalProductName">Name:</label>
+                            <input type="text" class="form-control" id="modalProductName" name="modalProductName" required>
                         </div>
                     </div>
                     <div class="modal-footer">

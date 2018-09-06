@@ -23,10 +23,20 @@ function renderProducts(data) {
 
 	$('#productList li').remove();
 	$.each(list, function(index, product) {
-		$('#productList').append('<li class="list-group-item"><a href="#" data-toggle="modal" data-target="#myModal" data-identity="' + product.id + '">'+ product.name +  '</a><span class="badge">' + product.price + '</span></li>');
+		$('#productList').append('<li class="list-group-item"><a href="#" data-toggle="modal" data-target="#productModal" data-drink-id="' + product.id + '">'+ product.name +  '</a><span class="badge">' + product.price + '</span></li>');
 		});
 }
 
 function errorProduct(jqXHR) {
 	$('#errorProduct').text( jqXHR.responseJSON );
 }
+
+//triggered when modal for product is about to be shown
+$('#productModal').on('show.bs.modal', function(e) {
+
+    //get data-id attribute of the clicked element
+    var drinkId = $(e.relatedTarget).data('drink-id');
+
+    //populate the textbox
+    $(e.currentTarget).find('input[name="modalProductName"]').val(drinkId);
+});
