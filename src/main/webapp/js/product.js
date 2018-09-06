@@ -44,10 +44,11 @@ $('#productModal').on('show.bs.modal', function(e) {
         url: rootURL +"/products/" + $(e.relatedTarget).data('drink-id'),
         dateType: "json",
         success: function (data) {
+            $('#modalProductName').text( data.name );
         	$('#modalProductDesc').text( data.description );
             $('#modalProductCat').text( data.category );
-            $('#modalProductSubCat_1').text( data.subCategory_1 );
-            $('#modalProductSubCat_2').text( data.subCategory_2 );
+            $('#modalProductSubCat1').text( data.subCategory_1 );
+            $('#modalProductSubCat2').text( data.subCategory_2 );
             $('#modalProductPrice').text( data.price + " $" ) ;
     	},
         error: errorProduct
