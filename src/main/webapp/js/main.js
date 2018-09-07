@@ -6,7 +6,7 @@ $('#homeCat').click(function() {
     $('#userRegistration').hide();
     $('#loginInfo').hide();
     $('#productSection').hide();
-    $('#welcomeImage').show();
+    $('#welcomePage').show();
 
     return false;
 });
@@ -15,10 +15,12 @@ $('#homeCat').click(function() {
 
 // Login button binding
 $('#btnLogin').click(function() {
+    $('#loginForm').trigger("reset");
 	$('#signInForm').trigger("reset");
 
-	$('#welcomeImage').hide();
+	$('#welcomePage').hide();
 	$('#userRegistration').hide();
+    $('#productSection').hide();
 	
 	$('#errorLogin').text( "" );
 	$('#loginInfo').show();
@@ -36,8 +38,9 @@ $('#btnSignin').click(function() {
 	$('#loginForm').trigger("reset");
     $('#signInForm').trigger("reset");
 
-    $('#welcomeImage').hide();
+    $('#welcomePage').hide();
 	$('#loginInfo').hide();
+    $('#productSection').hide();
 	
 	$('#errorSignin').text( "" );
 	$('#userRegistration').show();
@@ -50,8 +53,19 @@ $('#btnSigninOk').click(function() {
 	return false;
 });
 
+$('#btnFilterProduct').click(function() {
+    findProductByName();
+    return false;
+});
+
+
 $('#btnFindProduct').click(function() {
     findProduct();
+    $('#welcomePage').hide();
+    $('#loginInfo').hide();
+    $('#userRegistration').hide();
+
+    $('#productSection').show();
     return false;
 });
 
@@ -63,9 +77,10 @@ $('#btnSignout').click(function() {
 	$('#userRegistration').hide();
 	$('#loginInfo').hide();
 	$('#productSection').hide();
+    $('#signoutNavBar').hide();
 
-
-	$('#welcomeImage').show();
+    $('#loginNavBar').show();
+	$('#welcomePage').show();
 	
 	return false;
 });

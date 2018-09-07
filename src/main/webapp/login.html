@@ -19,21 +19,27 @@
                     <ul class="nav navbar-nav">
                         <li class="navbar-text">Mad Coffee Shop</li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" id="loginNavBar">
                         <li><a href="#" id="btnSignin"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                         <li><a href="#" id="btnLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
+
+                <ul class="nav navbar-nav navbar-right" id="signoutNavBar" hidden>
+                    <li class="navbar-text"><span class="glyphicon" id="userDisplayName"></span></li>
+                    <li><a href="#" id="btnSignout"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+                </ul>
+
             </nav>
 
 
-            <div class="row" id="welcomeImage">
-                <div class="column">
-                    <h2>Feel good at the Mad Cat Coffhe shop</h2>
+            <div class="row-f mainArea" id="welcomePage">
+                <div class="column-f">
+                    <h2>Feel good at the Mad Cat Coffee shop</h2>
                     <p>Taste our well crafter drink.<br> With good company is even better !!!</p>
                     <br>
                     <button type="submit" class="btn btn-default" id="btnFindProduct" > FIND A PRODUCT </button>
                 </div>
-                <div class="column" align="center">
+                <div class="column-f" align="center">
                     <img src="images/latte.png">
                 </div>
             </div>
@@ -49,16 +55,17 @@
         <div class="container-fluid mainArea" id="loginInfo" hidden>
             <br><br><br>
             <form id="loginForm">
-                <div class="form-group">
-                    <label for="emailAdr">Username:</label>
-                    <input type="text" class="form-control" id="emailAdr" name="emailAdr" required>
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <label class="input-group-addon" for="emailAdr">Username:</label>
+                    <input class="form-control" type="text" class="form-control" id="emailAdr" name="emailAdr" required>
                 </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required >
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <label class="input-group-addon" for="password">Password:</label>
+                    <input class="form-control" type="password" class="form-control" id="password" name="password" placeholder="Enter password" required >
                 </div>
-                <div class="errorArea" id="errorLogin"></div>
-                <button type="submit" class="btn btn-default" id="btnLoginOk" >Sign In</button>
+                <div class="input-group col-sm-4 col-sm-offset-4 errorArea" id="errorLogin"></div>
+                <br><br>
+                <button class="btn btn-primary col-sm-4 col-sm-offset-4" type="submit" class="btn btn-default" id="btnLoginOk" >Sign In</button>
             </form>
         </div>
         <!-- End of Login Page -->
@@ -66,51 +73,54 @@
         <!--  Registration Section -->
         <div class="container-fluid mainArea" id="userRegistration" hidden>
             <br><br><br>
-            <div class="row">
-                <form id="signInForm">
-                    <div class="column">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" class="form-control col-sm-10" id="name" name="name" required>
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon">Gender</span>
-                            <select class="form-control" id="sel1">
-                                <option value="Male">Man</option>
-                                <option value="Female">Women</option>
-                            </select>
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon">Date of Birth</span>
-                            <input type="date" class="form-control" id="birthdate" name="birthdate" required>
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon">Email</span>
-                            <input type="email" class="form-control" id="email" name="email" required placeholder="email@youremail.com">
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input type="password" class="form-control" id="passwordInput" name="passwordInput" placeholder="Enter password" required>
-                        </div>
-                    </div>
-                    <div class="column" align="center"><p></p>
-                    </div>
-                </form>
-            </div>
+            <form id="signInForm">
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control col-sm-10" id="name" name="name" required>
+                </div>
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <span class="input-group-addon">Gender</span>
+                    <select class="form-control" id="sel1">
+                        <option value="Male">Man</option>
+                        <option value="Female">Women</option>
+                    </select>
+                </div>
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <span class="input-group-addon">Date of Birth</span>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <span class="input-group-addon">Email</span>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="email@youremail.com">
+                </div>
+                <div class="input-group col-sm-4 col-sm-offset-4">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" class="form-control" id="passwordInput" name="passwordInput" placeholder="Enter password" required>
+                </div>
+                <div class="input-group col-sm-4 col-sm-offset-4 errorArea" id="errorSignin"></div>
+                <br><br>
+                <button class="btn btn-primary col-sm-4 col-sm-offset-4" type="submit" class="btn btn-default" id="btnSigninOk" >Register</button>
+            </form>
         </div>
         <!-- End of Registration Page -->
 
         <!-- Product Section -->
-        <div class="mainArea" id="productSection" hidden>
-            <div class="errorArea" id="errorProduct"></div>
-            <div class="mainAreaText">
-                <h2>Available Drinks</h2>
-                <ul class="list-group" id="productList"></ul>
-            </div>
+        <div class="container-fluid mainArea" id="productSection" hidden>
+            <br><br>
+                <form id="filterProductForm">
+                    <div class="row">
+                        <div class="input-group col-sm-6 col-sm-offset-3">
+                            <input type="text" class="form-control" placeholder="Filter by name" id="filterProductName" name="filterProductName" onfocusout="findProductByName()">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit" id="btnFilterProduct" ><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="input-group col-sm-6 col-sm-offset-3">
+                    <h2>Available Drinks</h2>
+                    <ul class="list-group" id="productList"></ul>
+                </div>
         </div>
 
         <!-- Product view Modal -->
@@ -138,7 +148,7 @@
                         </div>
                         <div class="form-group">
                             <label for="modalProductSubCat2">Sub Category 2:</label>
-                            <span class="label label-info" id="modalProductSubCat2">'</span>
+                            <span class="label label-warning" id="modalProductSubCat2">'</span>
                         </div>
                         <div class="form-group">
                             <label for="modalProductPrice">Price:</label>

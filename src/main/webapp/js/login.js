@@ -27,11 +27,13 @@ function callLoginService() {
 
 
 function sucessLogin(data) {
-    findProduct();
+    $('#userDisplayName').text(data.username);
 
 	$('#loginInfo').hide();
-	$('#userInfoBar').show();
-	$('#productSection').show();
+    $('#loginNavBar').hide();
+
+    $('#welcomePage').show();
+    $('#signoutNavBar').show();
 }
 
 function errorLogin(jqXHR) {
