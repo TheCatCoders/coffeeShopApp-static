@@ -1,12 +1,13 @@
 # CoffeeShop App
 
-Plain front end application using HTML5, JQuery and CSS.  The project represent the interface for a coffee shop
+Plain front end application using HTML5, Bootstrap, JQuery and CSS.  The project represent the interface for a coffee shop and is currently us as a demo purposes for a micro services architecture application. 
 
-This is a maven project so just import in your favorite IDE and it should work.
+This is a maven project so just import it into your favorite IDE and it should work.  For the more hardcore, it can also be build on the command line with standard maven command.
 
-Should run in a multitude of application server.  Has been tested with:
+The applicaiton was created to run in a standard Webserver.
 * Wildfly 10+
-* Openshift Container Platform ( OCP ) using S2I
+
+It has also been tested using docker containers using the s2i mechanism of OpenShift Container plateform.
 
 To operate properly it needs the microservices echo system
 
