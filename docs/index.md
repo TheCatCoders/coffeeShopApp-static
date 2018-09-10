@@ -1,3 +1,3 @@
 Just a test to had a file in the docs folder inside the repository to see how github pages react to this.
 
-{% include_relative ../README.md %}
+[README](../README.md)
