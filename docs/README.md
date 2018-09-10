@@ -18,5 +18,3 @@ To operate properly it needs the microservices echo system
 
 
 #Here how to [contribute](CONTRIBUTING.md)
-
-in docs
