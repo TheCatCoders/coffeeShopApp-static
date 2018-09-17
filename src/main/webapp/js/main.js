@@ -1,4 +1,4 @@
-// HOome
+// Home
 $('#homeCat').click(function() {
     $('#loginForm').trigger("reset");
     $('#signInForm').trigger("reset");

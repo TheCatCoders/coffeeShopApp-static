@@ -1,4 +1,3 @@
-
 function login() {
 	if( $('#username').val() == '' || $('#password').val() =='' ) {
 		$('#errorLogin').text( "Please fill all fields...!!!!!!" );
@@ -8,15 +7,12 @@ function login() {
 }
 
 function callLoginService() {
-	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://loginservice-coffeeshop.192.168.64.2.nip.io/LoginService/api";
-
 	$.ajax({
 		type: 'POST',
         cache: false,
         crossDomain: true,
 		contentType: 'application/json',
-		url: rootURL +"/login/",
+		url: loginService +"/login/",
 		dateType: "json",
 		data: loginFormToJSON(),
 		success: sucessLogin,

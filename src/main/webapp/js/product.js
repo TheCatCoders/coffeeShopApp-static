@@ -1,14 +1,11 @@
-
 function findProduct() {
 	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://productservice-coffeeshop.192.168.64.2.nip.io/ProductService/api";
-
 	$.ajax({
 		type: 'GET',
 		cache: false,
 		crossDomain: true,
 		contentType: 'application/json',
-		url: rootURL +"/products",
+		url: productService +"/products",
 		dateType: "json",
 		success: renderProducts,
 		error: errorProduct
@@ -17,8 +14,6 @@ function findProduct() {
 
 function findProductByName() {
     // Specific route in OCP, need to make this generic in some way
-    var rootURL = "http://productservice-coffeeshop.192.168.64.2.nip.io/ProductService/api";
-
     var name = $('#filterProductName').val();
 
     if ( name == '' ) {
@@ -29,7 +24,7 @@ function findProductByName() {
             cache: false,
             crossDomain: true,
             contentType: 'application/json',
-            url: rootURL + "/products/search/" + $('#filterProductName').val(),
+            url: productService + "/products/search/" + $('#filterProductName').val(),
             dateType: "json",
             success: renderProducts,
             error: errorProduct
@@ -54,16 +49,12 @@ function errorProduct(jqXHR) {
 
 //triggered when modal for product is about to be shown
 $('#productModal').on('show.bs.modal', function(e) {
-
-    // Specific route in OCP, need to make this generic in some way
-    var rootURL = "http://productservice-coffeeshop.192.168.64.2.nip.io/ProductService/api";
-
     $.ajax({
         type: 'GET',
         cache: false,
         crossDomain: true,
         contentType: 'application/json',
-        url: rootURL +"/products/" + $(e.relatedTarget).data('drink-id'),
+        url: productService +"/products/" + $(e.relatedTarget).data('drink-id'),
         dateType: "json",
         success: function (data) {
             $('#productModalHeader').text( data.name );

@@ -1,8 +1,4 @@
-
 function signIn() {
-	// Specific route in OCP, need to make this generic in some way
-	var rootURL = "http://registerservice-coffeeshop.192.168.64.2.nip.io/RegistrationService/api";
-
 	if( $('#name').val() == '' || 
 		$('#gender').val() =='' ||
 		$('#age').val() == '' || 
@@ -15,7 +11,7 @@ function signIn() {
 	        cache: false,
 	        crossDomain: true,
 			contentType: 'application/json',
-			url: rootURL +"/register/",
+			url: registerService +"/register/",
 			dateType: "json",
 			data: signinFormToJSON(),
 			success: sucessRegistration,
