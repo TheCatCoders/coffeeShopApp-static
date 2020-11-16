@@ -145,5 +145,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+.settings
+.target
+/target
+.classpath
+.project
+*.war
 
 # End of https://www.gitignore.io/api/web,macos,windows,intellij+all
