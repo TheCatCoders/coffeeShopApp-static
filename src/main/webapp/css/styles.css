@@ -41,12 +41,23 @@
     color: #ffffff;
 }
 
-.btn-default {
+/* Blue button */
+/* .btn-default {
     background-color: #0077b3 !important;
     border-color:#0077b3 !important;
     color:#FFFFFF !important;;
     font-size:18px
 }
+*/
+
+/* Green flash button */
+.btn-default {
+    background-color: #15b300 !important;
+    border-color:#15b300 !important;
+    color:#FFFFFF !important;;
+    font-size:18px
+}
+
 
 .mainArea {
     position: absolute;
