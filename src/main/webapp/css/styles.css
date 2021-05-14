@@ -45,7 +45,7 @@
 .btn-default {
     background-color: #0077b3 !important;
     border-color:#0077b3 !important;
-    color:#FFFFFF !important;;
+    color:#FFFFFF !important;
     font-size:18px
 }
 
@@ -53,10 +53,17 @@
 /*.btn-default {
     background-color: #15b300 !important;
     border-color:#15b300 !important;
-    color:#FFFFFF !important;;
+    color:#FFFFFF !important;
     font-size:18px
 }*/
 
+/* Red  button */
+.btn-default {
+    background-color: #b30900 !important;
+    border-color:#b30900 !important;
+    color:#FFFFFF !important;
+    font-size:18px
+}
 
 .mainArea {
     position: absolute;
